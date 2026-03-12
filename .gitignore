@@ -1,0 +1,37 @@
+# Compilation
+/dist
+/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Testing
+/coverage
+/.nyc_output
+
+# Environment
+.env
+.env.test
+.env.development
+.env.local
+.env.production
+!.env.example
+
+# IDEs and Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-workspace
+*.swp
+
+# Operating System
+.DS_Store
+Thumbs.db
