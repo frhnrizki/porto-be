@@ -8,6 +8,7 @@ import { ProjectsModule } from './testimonials/projects/projects.module';
 import { TestimonialsModule } from './testimonials/testimonials.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AboutModule } from './about/about.module';
+import { ContactsModule } from './contacts/contacts.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { AboutModule } from './about/about.module';
     TestimonialsModule,
     DashboardModule,
     AboutModule,
+    ContactsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
