@@ -29,9 +29,32 @@ CREATE TABLE IF NOT EXISTS public.projects (
 CREATE TABLE IF NOT EXISTS public.testimonials (
   id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
   name text NOT NULL,
+  role text,
+  avatar_url text,
   message text NOT NULL,
   rating integer NOT NULL CHECK (rating >= 1 AND rating <= 5),
   status text DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'rejected')),
+  created_at timestamp with time zone DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
+-- 4. Create Experiences Table
+CREATE TABLE IF NOT EXISTS public.experiences (
+  id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  role text NOT NULL,
+  company text NOT NULL,
+  date_range text NOT NULL,
+  order_index integer DEFAULT 0,
+  created_at timestamp with time zone DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
+-- 5. Create Stacks Table
+CREATE TABLE IF NOT EXISTS public.stacks (
+  id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  name text NOT NULL,
+  caption text,
+  icon_url text,
+  category text CHECK (category IN ('Design', 'Code', 'Tools')),
+  order_index integer DEFAULT 0,
   created_at timestamp with time zone DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 

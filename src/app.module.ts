@@ -7,6 +7,7 @@ import { AuthModule } from './auth/auth.module';
 import { ProjectsModule } from './testimonials/projects/projects.module';
 import { TestimonialsModule } from './testimonials/testimonials.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { AboutModule } from './about/about.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
     ProjectsModule,
     TestimonialsModule,
     DashboardModule,
+    AboutModule,
   ],
   controllers: [AppController],
   providers: [AppService],
