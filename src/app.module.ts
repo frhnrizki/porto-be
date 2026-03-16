@@ -9,6 +9,7 @@ import { TestimonialsModule } from './testimonials/testimonials.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AboutModule } from './about/about.module';
 import { ContactsModule } from './contacts/contacts.module';
+import { SpotifyModule } from './spotify/spotify.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { ContactsModule } from './contacts/contacts.module';
     DashboardModule,
     AboutModule,
     ContactsModule,
+    SpotifyModule,
   ],
   controllers: [AppController],
   providers: [AppService],
