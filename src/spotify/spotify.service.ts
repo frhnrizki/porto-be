@@ -80,6 +80,8 @@ export class SpotifyService {
         album: data.item.album.name,
         albumImageUrl: data.item.album.images?.[0]?.url ?? '',
         songUrl: data.item.external_urls?.spotify ?? '',
+        progressMs: data.progress_ms,
+        durationMs: data.item.duration_ms,
       };
     } catch (error) {
       this.logger.error(`Error fetching now playing: ${error.message}`);
