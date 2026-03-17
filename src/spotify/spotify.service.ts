@@ -67,6 +67,7 @@ export class SpotifyService {
       }
 
       const data = await response.json();
+      this.logger.debug('Spotify Now Playing Data:', JSON.stringify(data));
 
       if (!data || !data.is_playing || !data.item) {
         return { isPlaying: false };
