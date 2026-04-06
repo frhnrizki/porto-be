@@ -8,10 +8,10 @@ export class TestimonialsService {
 
     async create(createTestimonialDto: CreateTestimonialDto) {
         const supabase = this.supabaseService.getClient();
-        // Default to pending if not provided
+        // Default to approved for immediate visibility
         const payload = {
             ...createTestimonialDto,
-            status: createTestimonialDto.status || 'pending',
+            status: createTestimonialDto.status || 'approved',
         };
 
         const { data, error } = await supabase
